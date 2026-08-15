@@ -6,7 +6,7 @@ import qs.Ui
 
 BarWidget {
   id: root
-  moduleName: "omarchy.temperature"
+  moduleName: "io.github.rizmi.temperature"
 
   property var settings: ({})
 
@@ -93,7 +93,7 @@ BarWidget {
   }
 
   IpcHandler {
-    target: "omarchy.temperature"
+    target: "io.github.rizmi.temperature"
     function refresh(): void { root.fetchTemp() }
     function status(): string { return root.tempText }
   }

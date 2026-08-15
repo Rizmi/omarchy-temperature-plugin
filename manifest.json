@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "omarchy.temperature",
+  "id": "io.github.rizmi.temperature",
   "name": "CPU Temperature",
   "version": "1.0.0",
   "author": "Omarchy Community",

@@ -28,13 +28,13 @@ omarchy plugin add https://github.com/Rizmi/omarchy-temperature-plugin.git --ena
 1. Clone the repository into your Omarchy plugins directory:
    ```bash
    git clone https://github.com/Rizmi/omarchy-temperature-plugin.git \
-     ~/.config/omarchy/plugins/omarchy.temperature
+     ~/.config/omarchy/plugins/io.github.rizmi.temperature
    ```
 
 2. Validate and enable the plugin on your status bar:
    ```bash
-   omarchy plugin validate ~/.config/omarchy/plugins/omarchy.temperature
-   omarchy plugin enable omarchy.temperature --section right
+   omarchy plugin validate ~/.config/omarchy/plugins/io.github.rizmi.temperature
+   omarchy plugin enable io.github.rizmi.temperature --section right
    ```
 
 ---
@@ -42,8 +42,8 @@ omarchy plugin add https://github.com/Rizmi/omarchy-temperature-plugin.git --ena
 ## Removal
 
 ```bash
-omarchy plugin disable omarchy.temperature
-rm -rf ~/.config/omarchy/plugins/omarchy.temperature
+omarchy plugin disable io.github.rizmi.temperature
+rm -rf ~/.config/omarchy/plugins/io.github.rizmi.temperature
 omarchy-shell shell rescanPlugins
 ```
 
@@ -53,7 +53,7 @@ omarchy-shell shell rescanPlugins
 
 ### Enable in `~/.config/omarchy/shell.json`
 
-Add `omarchy.temperature` to your preferred bar layout section (`left`, `center`, or `right`):
+Add `io.github.rizmi.temperature` to your preferred bar layout section (`left`, `center`, or `right`):
 
 ```json
 {
@@ -61,7 +61,7 @@ Add `omarchy.temperature` to your preferred bar layout section (`left`, `center`
     "layout": {
       "right": [
         {
-          "id": "omarchy.temperature",
+          "id": "io.github.rizmi.temperature",
           "refreshIntervalSec": 5,
           "warningThreshold": 85,
           "criticalThreshold": 90
@@ -75,7 +75,7 @@ Add `omarchy.temperature` to your preferred bar layout section (`left`, `center`
 Or move it via the Omarchy CLI:
 
 ```bash
-omarchy bar move omarchy.temperature --section right
+omarchy bar move io.github.rizmi.temperature --section right
 ```
 
 ---
@@ -113,10 +113,10 @@ omarchy bar move omarchy.temperature --section right
 
 ```bash
 # Trigger an immediate sensor refresh
-omarchy-shell omarchy.temperature refresh
+omarchy-shell io.github.rizmi.temperature refresh
 
 # Check status / formatted temperature text
-omarchy-shell omarchy.temperature status
+omarchy-shell io.github.rizmi.temperature status
 ```
 
 ---
@@ -124,7 +124,7 @@ omarchy-shell omarchy.temperature status
 ## File Structure
 
 ```
-~/.config/omarchy/plugins/omarchy.temperature/
+~/.config/omarchy/plugins/io.github.rizmi.temperature/
 ├── BarWidget.qml    # QML widget UI, sensor loop & IPC handler
 ├── manifest.json    # Omarchy plugin manifest and settings schema
 ├── README.md        # Documentation and usage guide
