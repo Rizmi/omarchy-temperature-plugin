@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "omarchy.temperature",
+  "id": "io.github.rizmi.temperature",
   "name": "CPU Temperature",
   "version": "1.0.0",
-  "author": "Omarchy Community",
+  "author": "Rizmi",
   "license": "MIT",
   "description": "Real-time CPU temperature monitor with dynamic icons and multi-tier thermal alerts for Omarchy status bar.",
   "kinds": ["bar-widget"],
@@ -35,8 +35,8 @@
         "key": "warningThreshold",
         "type": "integer",
         "label": "Warning temperature (°C)",
-        "min": 50,
-        "max": 100,
+        "min": 40,
+        "max": 105,
         "step": 1,
         "defaultValue": 85
       },
@@ -44,7 +44,7 @@
         "key": "criticalThreshold",
         "type": "integer",
         "label": "Critical temperature (°C)",
-        "min": 60,
+        "min": 50,
         "max": 115,
         "step": 1,
         "defaultValue": 90

@@ -6,7 +6,7 @@ import qs.Ui
 
 BarWidget {
   id: root
-  moduleName: "omarchy.temperature"
+  moduleName: "io.github.rizmi.temperature"
 
   property var settings: ({})
 
@@ -44,8 +44,10 @@ BarWidget {
         root.tempIcon = "\uf2c7" // thermometer-full
       } else if (val >= root.warningThreshold) {
         root.tempIcon = "\uf2c8" // thermometer-three-quarters
-      } else if (val >= 65) {
+      } else if (val >= 60) {
         root.tempIcon = "\uf2c9" // thermometer-half
+      } else if (val >= 45) {
+        root.tempIcon = "\uf2ca" // thermometer-quarter
       } else {
         root.tempIcon = "\uf2cb" // thermometer-empty
       }
@@ -91,7 +93,7 @@ BarWidget {
   }
 
   IpcHandler {
-    target: "omarchy.temperature"
+    target: "io.github.rizmi.temperature"
     function refresh(): void { root.fetchTemp() }
     function status(): string { return root.tempText }
   }
