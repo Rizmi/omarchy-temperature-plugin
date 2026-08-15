@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "omarchy.temperature",
+  "name": "CPU Temperature",
+  "version": "1.0.0",
+  "author": "Omarchy Community",
+  "license": "MIT",
+  "description": "Real-time CPU temperature monitor with dynamic icons and multi-tier thermal alerts for Omarchy status bar.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "CPU Temperature",
+    "description": "Live CPU hardware temperature monitor.",
+    "category": "Hardware",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "refreshIntervalSec": 5,
+      "warningThreshold": 85,
+      "criticalThreshold": 90
+    },
+    "schema": [
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 1,
+        "max": 60,
+        "step": 1,
+        "defaultValue": 5
+      },
+      {
+        "key": "warningThreshold",
+        "type": "integer",
+        "label": "Warning temperature (°C)",
+        "min": 50,
+        "max": 100,
+        "step": 1,
+        "defaultValue": 85
+      },
+      {
+        "key": "criticalThreshold",
+        "type": "integer",
+        "label": "Critical temperature (°C)",
+        "min": 60,
+        "max": 115,
+        "step": 1,
+        "defaultValue": 90
+      }
+    ]
+  }
+}
