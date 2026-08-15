@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "io.github.rizmi.temperature",
+  "id": "omarchy.temperature",
   "name": "CPU Temperature",
   "version": "1.0.0",
-  "author": "Rizmi",
+  "author": "Omarchy Community",
   "license": "MIT",
   "description": "Real-time CPU temperature monitor with dynamic icons and multi-tier thermal alerts for Omarchy status bar.",
   "kinds": ["bar-widget"],

@@ -4,7 +4,7 @@ A lightweight, modern, and native [Omarchy](https://omarchy.org/) status bar wid
 
 ---
 
-## 📋 Requirements & Prerequisites
+## Requirements & Prerequisites
 
 Before installing the widget, ensure your system has:
 
@@ -15,7 +15,7 @@ Before installing the widget, ensure your system has:
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Option 1: Using `omarchy plugin` (Recommended)
 
@@ -28,22 +28,32 @@ omarchy plugin add https://github.com/Rizmi/omarchy-temperature-plugin.git --ena
 1. Clone the repository into your Omarchy plugins directory:
    ```bash
    git clone https://github.com/Rizmi/omarchy-temperature-plugin.git \
-     ~/.config/omarchy/plugins/io.github.rizmi.temperature
+     ~/.config/omarchy/plugins/omarchy.temperature
    ```
 
 2. Validate and enable the plugin on your status bar:
    ```bash
-   omarchy plugin validate ~/.config/omarchy/plugins/io.github.rizmi.temperature
-   omarchy plugin enable io.github.rizmi.temperature --section right
+   omarchy plugin validate ~/.config/omarchy/plugins/omarchy.temperature
+   omarchy plugin enable omarchy.temperature --section right
    ```
 
 ---
 
-## ⚙️ Configuration & Settings
+## Removal
+
+```bash
+omarchy plugin disable omarchy.temperature
+rm -rf ~/.config/omarchy/plugins/omarchy.temperature
+omarchy-shell shell rescanPlugins
+```
+
+---
+
+## Configuration & Settings
 
 ### Enable in `~/.config/omarchy/shell.json`
 
-Add `io.github.rizmi.temperature` to your preferred bar layout section (`left`, `center`, or `right`):
+Add `omarchy.temperature` to your preferred bar layout section (`left`, `center`, or `right`):
 
 ```json
 {
@@ -51,7 +61,7 @@ Add `io.github.rizmi.temperature` to your preferred bar layout section (`left`, 
     "layout": {
       "right": [
         {
-          "id": "io.github.rizmi.temperature",
+          "id": "omarchy.temperature",
           "refreshIntervalSec": 5,
           "warningThreshold": 85,
           "criticalThreshold": 90
@@ -65,7 +75,7 @@ Add `io.github.rizmi.temperature` to your preferred bar layout section (`left`, 
 Or move it via the Omarchy CLI:
 
 ```bash
-omarchy bar move io.github.rizmi.temperature --section right
+omarchy bar move omarchy.temperature --section right
 ```
 
 ---
@@ -80,7 +90,7 @@ omarchy bar move io.github.rizmi.temperature --section right
 
 ---
 
-## 🌡️ Dynamic Thermal Indicators
+## Dynamic Thermal Indicators
 
 | Glyph | Thermal Range | State | Alert Color |
 | :---: | :--- | :--- | :--- |
@@ -92,29 +102,29 @@ omarchy bar move io.github.rizmi.temperature --section right
 
 ---
 
-## 🖱️ Usage
+## Usage
 
 * **Left-click** bar widget: Launch or focus `btop` interactive hardware monitor (`omarchy-launch-or-focus-tui btop`).
 * **Hover** bar widget: Display tooltip with live temperature and thermal alert state (`[HIGH TEMP]`, `[CRITICAL TEMP]`).
 
 ---
 
-## ⌨️ Shell IPC Commands
+## Shell IPC Commands
 
 ```bash
 # Trigger an immediate sensor refresh
-omarchy-shell io.github.rizmi.temperature refresh
+omarchy-shell omarchy.temperature refresh
 
 # Check status / formatted temperature text
-omarchy-shell io.github.rizmi.temperature status
+omarchy-shell omarchy.temperature status
 ```
 
 ---
 
-## 📁 File Structure
+## File Structure
 
 ```
-~/.config/omarchy/plugins/io.github.rizmi.temperature/
+~/.config/omarchy/plugins/omarchy.temperature/
 ├── BarWidget.qml    # QML widget UI, sensor loop & IPC handler
 ├── manifest.json    # Omarchy plugin manifest and settings schema
 ├── README.md        # Documentation and usage guide
@@ -123,6 +133,6 @@ omarchy-shell io.github.rizmi.temperature status
 
 ---
 
-## 📄 License
+## License
 
 MIT — see [LICENSE](LICENSE).
