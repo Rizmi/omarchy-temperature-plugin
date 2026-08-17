@@ -14,6 +14,9 @@ Before installing the widget, ensure your system has:
 4. **`btop`** (standard on Omarchy, launched when clicking the widget for interactive monitoring).
 
 ---
+<img width="124" height="48" alt="image" src="https://github.com/user-attachments/assets/e55a8a92-7a76-402c-a37f-cac077a53c17" />
+<img width="195" height="66" alt="screenshot-2026-08-17_11-17-44" src="https://github.com/user-attachments/assets/4461f0de-04c2-4c57-be45-2a93c31a5eac" />
+---
 
 ## Installation
 
