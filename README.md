@@ -15,8 +15,11 @@ Before installing the widget, ensure your system has:
 
 ---
 
-<img width="195" height="66" alt="screenshot-2026-08-17_11-22-52" src="https://github.com/user-attachments/assets/b7121612-d7b2-4986-9107-97579f969cd9" />
-<img width="195" height="66" alt="screenshot-2026-08-17_11-17-44" src="https://github.com/user-attachments/assets/4461f0de-04c2-4c57-be45-2a93c31a5eac" />
+<p align="center">
+  <img src="https://imglink.cc/cdn/kEkMFiDeLM.png" alt="CPU Temperature Normal" height="55" />
+  &nbsp;&nbsp;
+  <img src="https://imglink.cc/cdn/W4trwSrgRu.png" alt="CPU Temperature Status" height="55" />
+</p>
 
 ---
 
